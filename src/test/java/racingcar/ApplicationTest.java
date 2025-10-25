@@ -31,6 +31,15 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @Test
+    void longNameTest() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("phobiii"))
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
+
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
