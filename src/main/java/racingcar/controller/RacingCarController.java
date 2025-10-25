@@ -22,6 +22,8 @@ public class RacingCarController {
             throw  new IllegalArgumentException("이름 입력이 잘못됐습니다.");
         }
 
+        int racingCount = inputView.getRacingCount();
+
     }
 
 

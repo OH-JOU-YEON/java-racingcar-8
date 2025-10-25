@@ -40,6 +40,15 @@ class ApplicationTest extends NsTest {
 
     }
 
+    @Test
+    void notNumberTest() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("pho", "phobi"))
+                        .isInstanceOf(NumberFormatException.class)
+        );
+
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
