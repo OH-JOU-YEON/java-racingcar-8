@@ -1,10 +1,12 @@
 package racingcar.model.domain;
 
-import java.security.SecureRandom;
+import camp.nextstep.edu.missionutils.Randoms;
+
+
 
 public class RandomNumberGenerate {
     public static int generateRandomNumZeroToTen() {
-        SecureRandom secureRandom = new SecureRandom();
-        return secureRandom.nextInt(11);
+       return Randoms.pickNumberInRange(0, 9);
+
     }
 }
