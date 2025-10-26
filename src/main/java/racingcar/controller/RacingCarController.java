@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import racingcar.model.domain.CarRace;
 import racingcar.model.domain.InputParser;
 import racingcar.view.InputView;
 
@@ -23,6 +24,8 @@ public class RacingCarController {
         }
 
         int racingCount = inputView.getRacingCount();
+
+        CarRace.holdCarRacing(carNames.getParsedInput(), racingCount);
 
     }
 
