@@ -1,8 +1,8 @@
 package racingcar.controller;
 
 import racingcar.model.domain.CarRace;
-import racingcar.model.domain.InputParser;
-import racingcar.view.InputView;
+import racingcar.model.domain.NameParser;
+import racingcar.view.NameView;
 
 public class RacingCarController {
 
@@ -10,11 +10,11 @@ public class RacingCarController {
 
     public void RacingCar() {
 
-        InputView inputView = new InputView();
+        NameView nameView = new NameView();
 
-        String input = inputView.getCarName();
+        String input = nameView.getCarName();
 
-        InputParser carNames = InputParser.getParsedInput(input);
+        NameParser carNames = NameParser.getParsedInput(input);
 
         boolean namesFormatRightOrNot = carNames.nameCheck();
 
@@ -23,15 +23,10 @@ public class RacingCarController {
             throw  new IllegalArgumentException("이름 입력이 잘못됐습니다.");
         }
 
-        int racingCount = inputView.getRacingCount();
+        int racingCount = nameView.getRacingCount();
 
         CarRace.holdCarRacing(carNames.getParsedInput(), racingCount);
 
     }
-
-
-
-
-
 
 }

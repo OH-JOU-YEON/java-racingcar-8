@@ -8,15 +8,12 @@ public class Car {
 
     public static Car createCar(String name) {
 
-        Car car = new Car(name);
-
-        return car;
+        return new Car(name);
     }
 
     private Car(String name) {
 
         this.name = name;
-
     }
 
    public int getMaxMoveCount(int max) {
@@ -48,7 +45,6 @@ public class Car {
 
         if(RandomNumberGenerate.generateRandomNumZeroToTen() >= 4 )
             ++this.moveCount;
-
     }
 
     @Override
@@ -56,6 +52,5 @@ public class Car {
 
         return this.printMoveCount();
     }
-
 
 }

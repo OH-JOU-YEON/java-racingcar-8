@@ -33,7 +33,7 @@ public class CarRace {
 
         for(Car car : this.contestantList) {
             car.carMove();
-            System.out.println(car.toString());
+            System.out.println(car);
         }
         System.out.println();
     }
@@ -80,6 +80,5 @@ public class CarRace {
 
         return "최종 우승자 : " + getWinnersName(this.winnersMoveCount());
     }
-
 
 }

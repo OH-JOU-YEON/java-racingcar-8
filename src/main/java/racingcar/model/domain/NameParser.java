@@ -1,15 +1,15 @@
 package racingcar.model.domain;
 
-public class InputParser {
+public class NameParser {
 
     private final String[] parsedInput;
 
-    public static InputParser getParsedInput(String input) {
-        return new InputParser(input);
+    public static NameParser getParsedInput(String input) {
+        return new NameParser(input);
     }
 
 
-    private InputParser(String input) {
+    private NameParser(String input) {
         this.parsedInput = input.split(",");
 
     }
@@ -27,6 +27,5 @@ public class InputParser {
     public String[] getParsedInput() {
         return parsedInput;
     }
-
 
 }
